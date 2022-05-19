@@ -1,5 +1,5 @@
-<div>
-  <div class="flex" *ngFor="let card of cards">
+<div class="flex gap-2">
+  <div class="flex gap-2" *ngFor="let card of cards">
     <div class="bg-gray-100 p-2">
       <img [src]="card.imgPath" alt="" />
       <p>{{ card.name }}</p>
@@ -10,3 +10,8 @@
     </div>
   </div>
 </div>
+<hr />
+<app-create-card
+  (cardCreated)="onCardDrawn($event)"
+  (cardHasBeenDrawn)="onCardDrawn($event)"
+></app-create-card>
