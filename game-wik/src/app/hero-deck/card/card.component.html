@@ -1,0 +1,8 @@
+<div class="bg-gray-100 p-2">
+  <img [src]="card.imgPath" alt="" />
+  <p>{{ card.name }}</p>
+  <div class="flex gap-2">
+    <span><fa-icon [icon]="swords"></fa-icon>{{ card.atk }}</span>
+    <span><fa-icon [icon]="shield"></fa-icon>{{ card.def }}</span>
+  </div>
+</div>

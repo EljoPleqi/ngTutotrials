@@ -10,15 +10,19 @@ export class CreateCardComponent implements OnInit {
   visible = false;
 
   // user custom cards
-  userCreatedCardType = '';
-  userCreatedCardImgPath = '';
-  userCreatedCardName = '';
-  userCreatedCardDesc = '';
-  userCreatedCardAtk = 0;
-  userCreatedCardDef = 0;
+  userCard = {
+    type: '',
+    race: '',
+    imgPath: '',
+    name: '',
+    desc: '',
+    atk: 0,
+    def: 0,
+  };
 
   @Output() cardCreated = new EventEmitter<{
     type: string;
+    race: string;
     imgPath: string;
     name: string;
     desc: string;
@@ -28,6 +32,7 @@ export class CreateCardComponent implements OnInit {
 
   @Output() cardHasBeenDrawn = new EventEmitter<{
     type: string;
+    race: string;
     imgPath: string;
     name: string;
     desc: string;
@@ -40,26 +45,12 @@ export class CreateCardComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreateCard() {
-    this.cardCreated.emit({
-      type: this.userCreatedCardType,
-      imgPath: this.userCreatedCardImgPath,
-      name: this.userCreatedCardName,
-      desc: this.userCreatedCardDesc,
-      atk: this.userCreatedCardAtk,
-      def: this.userCreatedCardDef,
-    });
+    this.cardCreated.emit(this.userCard);
   }
   onDrawCard() {
-    const card = data[Math.floor(Math.random() * 3)];
+    const card = data[Math.floor(Math.random() * 4)];
 
-    this.cardHasBeenDrawn.emit({
-      type: card.type,
-      imgPath: card.imgPath,
-      name: card.name,
-      desc: card.desc,
-      atk: card.atk,
-      def: card.def,
-    });
+    this.cardHasBeenDrawn.emit(card);
   }
 
   onCardCreationPanel() {

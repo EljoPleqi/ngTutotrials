@@ -6,7 +6,7 @@
       name="card-type"
       id=""
       class="border-2"
-      [(ngModel)]="userCreatedCardType"
+      [(ngModel)]="userCard.type"
     />
     <label for="card-name">Card Name</label>
     <input
@@ -14,7 +14,7 @@
       name="card-name"
       id=""
       class="border-2"
-      [(ngModel)]="userCreatedCardName"
+      [(ngModel)]="userCard.name"
     />
     <label for="card-image">Card image url</label>
     <input
@@ -22,7 +22,7 @@
       name="card-image"
       id=""
       class="border-2"
-      [(ngModel)]="userCreatedCardImgPath"
+      [(ngModel)]="userCard.imgPath"
     />
     <div class="flex flex-col gap-2">
       <div class="flex flex-col gap-2">
@@ -32,7 +32,7 @@
           name="atk"
           id=""
           class="border-2"
-          [(ngModel)]="userCreatedCardAtk"
+          [(ngModel)]="userCard.atk"
         />
       </div>
       <div class="flex flex-col gap-2">
@@ -42,7 +42,7 @@
           name="def"
           id=""
           class="border-2"
-          [(ngModel)]="userCreatedCardDef"
+          [(ngModel)]="userCard.def"
         />
       </div>
     </div>
