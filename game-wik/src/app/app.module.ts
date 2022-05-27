@@ -7,6 +7,8 @@ import { HeroDeckComponent } from './hero-deck/hero-deck.component';
 import { CreateCardComponent } from './hero-deck/create-card/create-card.component';
 import { CardComponent } from './hero-deck/card/card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LifepointsComponent } from './lifepoints/lifepoints.component';
+import { EnemyComponent } from './enemy/enemy.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeroDeckComponent,
     CreateCardComponent,
     CardComponent,
+    LifepointsComponent,
+    EnemyComponent,
   ],
   imports: [BrowserModule, FormsModule, FontAwesomeModule],
   providers: [],
