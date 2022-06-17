@@ -3,6 +3,7 @@
     class="col-xs-12"
     *ngFor="let recipe of recipes"
     [recipe]="recipe"
+    (selected)="onSelected(recipe)"
   ></app-recipe-item>
 </div>
 <hr />
